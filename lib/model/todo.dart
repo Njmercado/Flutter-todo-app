@@ -6,5 +6,6 @@ class Todo {
   String body;
   int completed;
   Color color = Colors.deepOrangeAccent;
-  Todo({this.title, this.body, this.completed});
+  Icon icon;
+  Todo({this.title, this.body, this.completed, this.icon});
 }

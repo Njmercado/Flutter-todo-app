@@ -1,5 +1,6 @@
 import 'package:f_202010_todo_class/model/todo.dart';
 import 'package:flutter/material.dart';
+import 'package:f_202010_todo_class/components/newTodoDropdown.dart';
 
 class CreateNote extends StatefulWidget {
 
@@ -17,7 +18,8 @@ class _CreateNoteState extends State<CreateNote> {
   String _title;
   String _description;
   Color _color;
-  Todo _todo = new Todo(title: 'title', body: 'body', completed: 0);
+  Icon _icon;
+  Todo _todo = new Todo(title: 'title', body: 'body', completed: 0, icon: Icon(Icons.check));
 
   void _onTitleChange(String title) {
     setState(() {
@@ -37,6 +39,13 @@ class _CreateNoteState extends State<CreateNote> {
     setState(() {
       _color = color;
       _todo.color = color;
+    });
+  }
+
+  void _onIconChange(Icon icon) {
+    setState(() {
+      _icon = icon;
+      _todo.icon = icon;
     });
   }
 
@@ -99,7 +108,7 @@ class _CreateNoteState extends State<CreateNote> {
 
   Widget _buildDialogContent(context) {
     return Container(
-      height: 256,
+      height: 300,
       child: Column(
         children: <Widget>[
           TextField(
@@ -118,6 +127,11 @@ class _CreateNoteState extends State<CreateNote> {
             },
           ),
           _colorOptions(),
+          DropDown(
+            onIconChange: (icon){
+              _onIconChange(icon);
+            },
+          )
         ],
       ),
     );

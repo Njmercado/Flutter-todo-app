@@ -9,7 +9,7 @@ class HomePageTodo extends StatefulWidget {
 }
 
 class _HomePageTodoState extends State<HomePageTodo> {
-  List<Todo> todos = List<Todo>.generate(100, (i) => new Todo(title: "title", body: "excuse me careverga"));
+  List<Todo> todos = List<Todo>();
 
   @override
   Widget build(BuildContext context) {

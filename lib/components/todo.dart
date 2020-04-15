@@ -30,23 +30,34 @@ class TodoWidget extends StatelessWidget {
   Widget _buildItemContent(Todo element) {
     return Container(
       padding: EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: <Widget>[
-          Text(
-            '${element.title}',
-            style: TextStyle( 
-              fontSize: 20,
-              color: Colors.white,
+          Container(
+            margin: EdgeInsets.only(
+              right: 16,
+              left: 16
             ),
+            child: element.icon,
           ),
-          Text(
-            '${element.body}',
-            style: TextStyle(
-              color: Colors.white70,
-              fontSize: 16,
-            ),
-          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                '${element.title}',
+                style: TextStyle( 
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                '${element.body}',
+                style: TextStyle(
+                 color: Colors.white70,
+                 fontSize: 16,
+                ),
+              ),
+            ]
+          )
         ]
       )
     );

@@ -1,14 +1,10 @@
 Modificaciones:
-  * General:
-    + Projecto modificado y mejorado.
-    + Plantilla tomada de:
-      https://github.com/augustosalazar/F_202010_ClassTodoApp/
   Components:
-    * dialogToCreateNote:
-      + Componente creado.
-      + Permite el poder crear los task deseados.
-      + Se puede elegir el color del task a crear.
-    * todo:
-      + Componente creado.
-      + Permite el poder visualizar el task creado.
-      + Muestra tanto el titulo como la descripción.
+    * DropDown:
+      + Creado componente.
+      + Selecciona el icono de la nota a crear.
+    * Todo:
+      + Agregado icono de nota.
+  Modelo:
+    * Todo:
+      + Agregado campo de icono para la nota.
